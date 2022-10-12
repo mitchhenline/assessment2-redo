@@ -59,7 +59,7 @@ function canWeDeliver(zipCode){
          return "You're in our delivery zone";
      }
   }
- return "Can't deliver";
+ return "Sorry, we can't deliver to that address";
 }
 
 console.log(canWeDeliver(85203))
@@ -82,6 +82,14 @@ console.log(canWeDeliver(85203))
 */
 
 // CODE HERE
+
+let canWeDeliverTwo = zipCode => {
+    if (deliveryAreaZipCodes.includes(zipCode)){
+     return "You're in our delivery zone"
+        } else { 
+             return "Sorry, we can't deliver to that address"}
+}
+console.log(canWeDeliverTwo(85263))
 
 
 
@@ -120,8 +128,9 @@ const deals = [
 
 //CODE HERE
 
-deals[0].title = deals[0].title.replace('15', '10');
-console.log(deals);
+deals[0].title = deals[0].title.replace('15', '10')
+//console.log(deals)
+
 
 
 
@@ -139,3 +148,7 @@ console.log(deals);
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace('March', 'April')
+deals[1].desc = deals[1].desc.trim()
+console.log(deals)
