@@ -35,8 +35,12 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce(function(x, y){
+    return x + y.price
+}, 0)
 
+console.log(summedPrice)
+ 
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,6 +59,11 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice(cartTotal, couponValue, tax){
+    return ((cartTotal - couponValue) + ((cartTotal - couponValue) * tax))
+}
+
+//console.log(calcFinalPrice(12, 2, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +87,11 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Customer Object needs to have information such as:
+Where shopping from: (online, in person) string
+Purchase amount: number
+Payment method (cash or card) string
+Age: number
 
 */
 
@@ -88,3 +101,11 @@ const cart = [
 */
 
 //CODE HERE
+
+const customerOne = {
+    location: "online",
+    purchaseAmount: 47.89,
+    method: "card",
+    age: 49,
+}
+//console.log(customerOne)
